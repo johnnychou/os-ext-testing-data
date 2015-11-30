@@ -10,8 +10,8 @@ export UPSTREAM_GERRIT_SSH_KEY_PATH=id_rsa
 export PUBLISH_HOST=127.0.0.1
 
 #Used by Nodepool
-export MYSQL_ROOT_PASSWORD=changeme
-export MYSQL_PASSWORD=changeme
+export MYSQL_ROOT_PASSWORD=123456
+export MYSQL_PASSWORD=123456
 export PROVIDER_USERNAME=admin
 export PROVIDER_PASSWORD=changeme
 #export PROVIDER_IMAGE_NAME="Ubuntu 14.04 Server Glance Image (Trusty)"
@@ -22,8 +22,8 @@ export JENKINS_API_USER=jenkins
 #This credentials id is the default.  Change if needed.
 export JENKINS_CREDENTIALS_ID=f4f07d8e-2634-4d01-bcf6-7b8be996e062
 
-#TODO: automate whitespace removal
-export JENKINS_SSH_PUBLIC_KEY_NO_WHITESPACE=
+#TODO: automate whitespace removali
+export JENKINS_SSH_PUBLIC_KEY_NO_WHITESPACE=AAAAB3NzaC1yc2EAAAADAQABAAAAgQDqd287A8xmtXqkWNr9/YjvQyJ5Z7Jd6Lm4RxT8vgAKhtabJbackajHYnn3K7AjNtehoyPnuwArJMGz1k4QxwEbBzEIGE5ylIODNATew8ZckxmvS2sBdVOC3XzZf9bfelmI4dwhD/zlcZqGxdOucddqXZ5JbEYvuhaSAgn6kqzNTQ==
 export JENKINS_SSH_KEY_PATH=jenkins_key
 
 #export HTTP_PROXY=http://myproxy.com:8080/
