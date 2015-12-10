@@ -5,13 +5,14 @@ includes:
 pipelines:
   - name: check
     description: Newly uploaded patchsets enter this pipeline to receive an initial +/-1 Verified vote from Jenkins.
-    failure-message: "Build failed.  For information on how to proceed, see https://wiki.openstack.org/wiki/GerritJenkinsGit#Test_Failures. For 3rd party ci contact info: https://wiki.openstack.org/wiki/ThirdPartySystems/Infortrend_Storage_CI"
+    failure-message: "Build failed.  For information on how to proceed, see https://wiki.openstack.org/wiki/GerritJenkinsGit#Test_Failures. For 3rd party ci contact info: https://wiki.openstack.org/wiki/ThirdPartySystems/"
     manager: IndependentPipelineManager
     trigger:
       gerrit:
         - event: patchset-created
         - event: change-restored
         - event: comment-added
+
           comment: (?i)^(Patch Set [0-9]+:)?( [\w\\+-]*)*(\n\n)?\s*recheck(( (?:bug|lp)[\s#:]*(\d+))|( no bug))\s*$
         # Change "myvendor" below to your vendor's name to add a custom
         # recheck trigger that runs the check pipeline jobs when someone
@@ -45,13 +46,14 @@ pipelines:
 
 jobs:
   - name: ^dsvm-tempest.*$
-    parameter-function: reusable_node
-    voting: false
-
+    parameter-function: single_use_node
 
 projects:
-  - name: openstack/cinder
+  - name: openstack-dev/ci-sandbox
     check:
-      - infortrend-cinder-volume-iscsi
-      - infortrend-cinder-volume-fc
-
+      # Remove this after successfully verifying communication with upstream
+      # and seeing a posted successful review.
+      - noop-check-communication
+      # Uncomment this job when you have a jenkins slave running and want to
+      # test a full Tempest run within devstack.
+      #- dsvm-tempest-full

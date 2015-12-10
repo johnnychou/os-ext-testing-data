@@ -18,9 +18,9 @@ export PROVIDER_PASSWORD=changeme
 #export PROVIDER_IMAGE_SETUP_SCRIPT_NAME="prepare_node_devstack_http_proxy.sh"
 export JENKINS_API_USER=jenkins
 #API Key is used if you secure your jenkins with a password
-#export JENKINS_API_KEY=<hex_id>
+export JENKINS_API_KEY=b82bb1bcc4216361a3654ba88a77d30a
 #This credentials id is the default.  Change if needed.
-export JENKINS_CREDENTIALS_ID=2a65b4db-9fc0-4482-beec-b1b103324986
+export JENKINS_CREDENTIALS_ID=5667ca97-8ae9-41b5-9ec4-cdae983a84df
 
 #TODO: automate whitespace removali
 export JENKINS_SSH_PUBLIC_KEY_NO_WHITESPACE=AAAAB3NzaC1yc2EAAAADAQABAAAAgQCylHqU9YEt3nSMgsUOXh1OeENBh15x8fPfG0rivvkN7kgh0t6JEXGWu/NAHHEYqr5UQ4ul3uKqHgLDtBiEGMa1vtUWZOUYWrdQjEoTNM2SD1ZNDJ7biQoD2wxcpRZ9Y9i4ZQh9rGhOmo3YK53vzxTUApcON39KuefeN5OprCzcKw==
